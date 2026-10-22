@@ -1,5 +1,6 @@
 import express from 'express';
 
+app.use(express.urlencoded({ extended: true }));
 const app = express();
 const PORT = 3011;
 
@@ -39,7 +40,7 @@ app.get('/confirm', (req, res) => {
     res.sendFile(`${import.meta.dirname}/views/confirm.html`);
 })
 
-app.use(express.urlencoded({ extended: true }));
+
 
 
 
