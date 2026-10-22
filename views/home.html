@@ -8,16 +8,12 @@
     <script src = "../scripts/home-script.js" defer></script>
 </head>
 <body>
-    <main>
-        <h1 id = "appt-header">Appointment Scheduler</h1>
-        <form id = "appt-form" action = "/submit-appt" method= "post">
-            <h2>Book an Appointment</h2>
-
-            <div id = "fname-box">
-                <label for = "fname">First Name</label>
-                <input type = "text" id = "fname" name = "fname">
-                <span class = "err" id = "err-fname">First name is required</span>
-            </div>
+    <h1>Appointment Scheduler</h1>
+    <form action="/submit-appointment" method="post">
+        <h2>Book an Appointment</h2>
+        <label for = "fname">First Name</label>
+        <input type = "text" id = "fname" name = "fname">
+        <span class = "err" id = "err-fname">First name is required</span>
 
             <div id = "lname-box">
                 <label for = "lname">Last Name</label>
