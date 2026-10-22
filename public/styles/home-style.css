@@ -39,6 +39,10 @@ main{
     "submit";
 }
 
+#appt{
+    grid-area: appt;
+}
+
 #fname-box{
     grid-area: fname;
 }
