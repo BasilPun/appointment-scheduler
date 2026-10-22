@@ -13,6 +13,8 @@ document.getElementById('appt-form').onsubmit = () =>{
         document.getElementById("err-lname").style.display = "block";
         isValid = false;
     }
+
+    return isValid;
 }
 
 function clearErrors(){

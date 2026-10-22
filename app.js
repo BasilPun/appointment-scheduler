@@ -1,21 +1,24 @@
 import express from 'express';
 
-app.use(express.urlencoded({ extended: true }));
 const app = express();
 const PORT = 3011;
+app.use(express.urlencoded({ extended: true }));
 
 app.use(express.static('public'));
+
+const appointments = [];
 
 app.get('/', (req, res) =>{
     res.sendFile(`${import.meta.dirname}/views/home.html`)
 });
 
+app.get('/admin', (req, res) =>{
+    res.send(appointments);
+});
 
 app.listen(PORT, () =>{
     console.log(`Server is running at: http://localhost:${PORT}`);
 });
-
-const appointments = [];
 
 //post
 app.post('/submit-appointment', (req, res) => {
