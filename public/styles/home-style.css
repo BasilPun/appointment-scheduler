@@ -1,0 +1,76 @@
+.err{
+    display: none;
+    color: red;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+main{
+    width:70%;
+    border: 1px solid black;
+    margin: 0 auto;
+    border-radius: 5px;
+    display: grid;
+    grid-template-areas: 
+    "appt-header"
+    "form";
+}
+
+#appt-header{
+    grid-area: appt-header;
+    padding-left: 2rem;
+    padding-top: 1rem;
+}
+
+#appt-form{
+    padding: 2rem 2rem;
+    grid-area: form;
+    display: grid;
+    gap: 1rem;
+    grid-template-areas: 
+    "appt"
+    "fname"
+    "lname"
+    "meeting-date"
+    "meeting-time"
+    "submit";
+}
+
+#fname-box{
+    grid-area: fname;
+}
+
+#lname-box{
+    grid-area: lname;
+}
+
+#meeting-date-box{
+    grid-area: meeting-date;
+}
+
+#meeting-time-box{
+    grid-area: meeting-time;
+}
+
+#submit{
+    grid-area: submit;
+}
+
+input{
+    width: 100%;
+    height: 1.5rem;
+}
+
+#submit{
+    border: none;
+    background-color: green;
+    border-color: green;
+    padding: .5rem .75rem;
+    border-radius: .25rem;
+    text-decoration: none;
+    color: white
+}
+

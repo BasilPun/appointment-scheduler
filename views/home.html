@@ -8,24 +8,35 @@
     <script src = "../scripts/home-script.js" defer></script>
 </head>
 <body>
-    <h1>Appointment Scheduler</h1>
-    <form>
-        <h2>Book an Appointment</h2>
-        <label for = "fname">First Name</label>
-        <input type = "text" id = "fname" name = "fname">
-        <span class = "err" id = "err-fname">First name is required</span>
+    <main>
+        <h1 id = "appt-header">Appointment Scheduler</h1>
+        <form id = "appt-form" action = "/submit-appt" method= "post">
+            <h2>Book an Appointment</h2>
 
-        <label for = "lname">Last Name</label>
-        <input type = "text" id = "lname" name = "lname">
-        <span class = "err" id = "err-lname">Last name is required</span>
+            <div id = "fname-box">
+                <label for = "fname">First Name</label>
+                <input type = "text" id = "fname" name = "fname">
+                <span class = "err" id = "err-fname">First name is required</span>
+            </div>
 
-        <label for = "meeting-date">Meeting Date</label>
-        <input type = "date" id = "meeting-date" name = "meeting-date">
+            <div id = "lname-box">
+                <label for = "lname">Last Name</label>
+                <input type = "text" id = "lname" name = "lname">
+                <span class = "err" id = "err-lname">Last name is required</span>
+            </div>
 
-        <label for = "meeting-time">Meeting Time</label>
-        <input type = "time" id = "meeting-time" name = "meeting-time">
+            <div id = "meeting-date-box">
+                <label for = "meeting-date">Meeting Date</label>
+                <input type = "date" id = "meeting-date" name = "meeting-date">
+            </div>
 
-        <button type = "submit" id = "order-button">Place order</button>
-    </form>
+            <div id = "meeting-time-box">
+                <label for = "meeting-time">Meeting Time</label>
+                <input type = "time" id = "meeting-time" name = "meeting-time">
+            </div>
+
+            <button type = "submit" id = "submit">Place order</button>
+        </form>
+    </main>
 </body>
 </html>
