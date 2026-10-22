@@ -12,6 +12,7 @@ main{
     width:70%;
     border: 1px solid black;
     margin: 0 auto;
+    margin-top: 2rem;
     border-radius: 5px;
     display: grid;
     grid-template-areas: 
