@@ -13,3 +13,11 @@ app.get('/', (req, res) =>{
 app.listen(PORT, () =>{
     console.log(`Server is running at: http://localhost:${PORT}`);
 });
+
+
+
+//add a contact route to displays a CONFIRM view page
+app.get('/confirm', (req, res) => {
+    //send this file
+    res.sendFile(`${import.meta.dirname}/views/confirm.html`);
+})
