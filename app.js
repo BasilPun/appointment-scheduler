@@ -14,20 +14,20 @@ app.listen(PORT, () =>{
     console.log(`Server is running at: http://localhost:${PORT}`);
 });
 
-const appointmenets = [];
+const appointments = [];
 
 //post
 app.post('/submit-appointment', (req, res) => {
     console.log(req.body);
     //
      const appointment = req.body;
-     appointment['timestamp'] = new Date();
-     //console.log(appointment);
+     //appointment.timestamp = new Date();
+     console.log(appointment);
 
-     appointmenets.push(appointment);
+     appointments.push(appointment);
 
      //confirm it happned
-     console.log(appointmenets);
+     console.log(appointments);
 
      res.sendFile(`${import.meta.dirname}/views/confirm.html`);
 })
